@@ -10,3 +10,6 @@ Create two enviroment variables
 ## IR LED
 
 This route is use to control de LED with the IR transmitter.
+
+Example URL:
+http://192.168.178.30:5000/LED/off

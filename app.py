@@ -56,3 +56,8 @@ def sendCommand(command):
     except Exception as error:
         response = {"error": error.__str__()}
     return response
+
+
+if __name__ == '__main__':
+    app.debug = True
+    app.run(host="0.0.0.0")
