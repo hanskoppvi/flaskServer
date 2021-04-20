@@ -1,4 +1,4 @@
-FROM  python:3.8-alpine
+FROM  python:3.10.0a7-slim-buster
 
 WORKDIR /app
 COPY . .
@@ -8,7 +8,8 @@ ENV FLASK_APP='./src/app.py'
 ENV FLASK_ENV='development'
 
 # Get all the requierements
-RUN apk add gcc g++\
-    && pip3 install --no-cache-dir -r ./requirements.txt 
+RUN apt update
+RUN apt-get install gcc g++ -y
+RUN pip3 install --no-cache-dir -r ./requirements.txt 
 
 CMD ["flask", "run", "--host=0.0.0.0"]
