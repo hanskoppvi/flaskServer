@@ -1,0 +1,11 @@
+
+POST http://192.168.178.23:5000/receiver
+Content-Type: application/x-www-form-urlencoded
+
+"budgetDisplayName" : "name-of-budget"
+
+####
+GET http://192.168.178.35/commands
+Content-Type: application/x-www-form-urlencoded
+
+"x" : "11"
